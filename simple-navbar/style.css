@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+}
+
+/* Large */
+
+.navigation {
+  display: flex;
+  list-style: none;
+  /* This aligns items to the end line on main-axis */
+  justify-content: flex-end;
+  align-items: center;
+  background: navajowhite;
+  margin: 0;
+  height: 45px;
+}
+
+.navigation a {
+  text-decoration: none;
+  padding: 14px;
+  color: black;
+}
+
+.navigation a:hover {
+  background: rgb(186, 142, 76);
+  color: white;
+}
+
+/* .navigation a:focus {
+  background: rgb(186, 142, 76);
+  color: white;
+} */
+
+/* Medium Screens */
+@media all and (max-width: 750px) {
+  .navigation {
+    /* When on medium sized devices , we center it by evenly distributing empty space around items */
+    justify-content: space-around;
+  }
+}
+
+/* Small Screens */
+@media all and (max-width: 400px) {
+  .navigation {
+    /* On smal screens , we are no longer using row direction but column */
+    flex-direction: column;
+    height: 100px;
+  }
+  .navigation a {
+    text-decoration: none;
+    padding: 6px;
+    color: black;
+  }
+}
